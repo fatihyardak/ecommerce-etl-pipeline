@@ -1,0 +1,8 @@
+pyspark
+google-cloud-storage
+google-cloud-bigquery
+gcsfs
+pandas
+pytest
+apache-airflow==2.9.2 
+apache-airflow-providers-google
