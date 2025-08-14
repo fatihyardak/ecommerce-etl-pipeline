@@ -1,20 +1,22 @@
-from airflow import DAG
-from airflow.providers.standard.operators.empty import EmptyOperator
-from airflow.triggers.base import StartTriggerArgs
 import pendulum
 
+from airflow.models.dag import DAG
+from airflow.operators.empty import EmptyOperator
 
 with DAG(
-    dag_id = "ecommerce_etl_pipeline",
-    start_date = pendulum.datetime(2025, 8, 13, tz="Europe/Istanbul"),
+    dag_id="ecommerce_etl_pipeline",
+    start_date=pendulum.datetime(2025, 8, 13, tz="Europe/Istanbul"),
     schedule=None,
-    catchup=False, 
+    catchup=False,
+    tags=["ecommerce", "spark", "gcp"],
+) as dag:
 
-    tags=["ecommerce", "spark", "gcp"]
-) as dag: 
 
-start_task = EmptyOperator(task_id="start")
+    start_task = EmptyOperator(task_id="start")
 
-end_task = EmptyOperator(task_id="end")
 
-start_task >> end_task
+
+    end_task = EmptyOperator(task_id="end")
+
+    
+    start_task >> end_task
