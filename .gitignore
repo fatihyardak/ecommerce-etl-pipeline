@@ -45,3 +45,6 @@ Thumbs.db
 service-account-key.json
 gcp-credentials.json
 
+.env.bak
+spark_app/.env_spark
+spark_app/.env_spark

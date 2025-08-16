@@ -1,8 +1,4 @@
 pyspark
 google-cloud-storage
 google-cloud-bigquery
-gcsfs
 pandas
-pytest
-apache-airflow
-apache-airflow-providers-google
