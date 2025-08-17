@@ -48,3 +48,4 @@ gcp-credentials.json
 .env.bak
 spark_app/.env_spark
 spark_app/.env_spark
+notebooks/
